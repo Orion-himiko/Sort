@@ -1,0 +1,26 @@
+<html>
+    <head>
+    </head>
+
+    <body>
+        <h1>Sort</h1>
+        <p id="p1"></p>
+        <button id="button" onclick="asc()">Ascending Order</button>
+        <button id="button" onclick="desc()">Descending Order</button>
+        <p id="p2"></p>
+
+        <script>
+            var a= [43, 26, 76, 43, 83, 28, 54]
+            document.getElementById('p1').innerHTML= "Original Array: "+ a;
+            function asc(){
+                a.sort(function(a,b){return a-b});
+                document.getElementById('p2').innerHTML= "Ascending Order: "+ a;
+             }
+
+             function desc(){
+                a.sort(function(a,b){return b-a});
+                document.getElementById('p2').innerHTML= "Descending Order: "+ a;
+             }
+        </script>
+    </body>
+</html>
